@@ -1,0 +1,9 @@
+flask
+onnxruntime
+scikit-learn
+pandas
+nltk
+numpy
+tensorflow
+tf2onnx
+datasets
