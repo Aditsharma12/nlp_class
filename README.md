@@ -70,6 +70,35 @@ flowchart LR
 - **`vectorizer.pkl`**: The fitted mathematical dictionary used for transforming strings into tensors.
 - **`requirements.txt`**: Python dependencies.
 - **`templates/`**: Holds the frontend application files (`index.html`).
+- **`test_app.py`**: Test suite for the application using `pytest`.
+- **`Dockerfile`**: Defines the container image for running the app in isolated environments.
+- **`Makefile`**: Handy shortcuts for common tasks (e.g. testing, building).
+- **`.github/workflows/`**: Continuous Integration (CI) configuration for GitHub Actions.
+
+## ⚙️ MLOps & Testing
+
+This project employs MLOps best practices:
+- **CI/CD Pipeline**: GitHub actions are configured to automatically run code checks and tests.
+- **Testing**: The test suite covers both unit testing and API endpoint testing. Use `pytest` to run tests locally:
+  ```bash
+  pytest test_app.py -v
+  ```
+
+## 🐳 Docker Deployment
+
+To build and run the application within a Docker container:
+```bash
+docker build -t nlp_sentiment_app .
+docker run -p 5000:5000 nlp_sentiment_app
+```
+
+## 🛠️ Make Commands
+
+Use `make` for quick execution of recurring tasks:
+- `make run`: Starts the Flask app.
+- `make test`: Runs `pytest`.
+- `make build`: Builds the Docker image.
+- `make docker-run`: Runs the container locally.
 
 ## 🚀 Quick Start
 
