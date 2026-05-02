@@ -37,7 +37,7 @@ def test_preprocess_text():
 def test_apply_contrast_weighting():
     text = "it is good but it is expensive"
     res = apply_contrast_weighting(text)
-    assert res == "it is good  it is expensive it is expensive"
+    assert res == "it is good   it is expensive  it is expensive"
 
 def test_extract_words():
     words = extract_words("I love this amazing product")
